@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  .breadcrumbs {
+    margin-bottom: $spacing-md;
+
+    p {
+      font-size: 13px;
+
+      a {
+        color: $gray-400;
+      }
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #3E515B;
+      margin-top: 6px;
+    }
+  }
+
+  .primary-actions {
+    display: flex;
+
+    .btn-primary {
+      margin-left: $spacing-sm;
+      background: $brand-secondary;
+      color: white;
+      border-radius: $border-radius;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin-left: $spacing-sm;
+      }
+    }
+  }
+}
