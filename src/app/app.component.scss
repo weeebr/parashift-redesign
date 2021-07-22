@@ -7,24 +7,4 @@
 
 .app {
   display: flex;
-
-  .content {
-    background: $gray-100;
-    width: 100%;
-    padding: 24px;
-
-    main {
-      background: white;
-      padding: $spacing-md;
-      border: 1px solid $gray-200;
-      margin-bottom: $spacing-md;
-
-      &.with-tabs {
-        border-top: 0;
-        border-left: 1px solid $gray-200;
-        border-bottom: 1px solid $gray-200;
-        border-right: 1px solid $gray-200;
-      }
-    }
-  }
 }
