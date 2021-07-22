@@ -8,8 +8,6 @@ header {
     margin-bottom: $spacing-md;
 
     p {
-      font-size: 13px;
-
       a {
         color: $gray-400;
       }
@@ -35,6 +33,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0 12px;
 
       p {
         margin-left: $spacing-sm;

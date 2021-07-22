@@ -53,9 +53,14 @@ body, button {
   font-family: Barlow, Arial, sans-serif;
   font-size: 13px;
   color: #3E515B;
+  border: none;
 }
 
 a {
   color: #4DB6CE;
   text-decoration: none;
+}
+
+input {
+  outline: 0;
 }

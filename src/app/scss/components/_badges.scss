@@ -1,0 +1,23 @@
+.badge {
+  border-radius: 9999px;
+  padding: 6px $spacing-sm;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.primary {
+    background: $brand-primary;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+
+    img {
+      margin-right: 6px;
+    }
+  }
+
+  &.secondary {
+    box-shadow: 0 0 0 1px $brand-primary;
+    color: $brand-primary;
+  }
+}

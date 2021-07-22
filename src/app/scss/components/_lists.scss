@@ -9,18 +9,19 @@
       border-radius: $border-radius;
       background: white;
       padding: $spacing-sm;
-      margin-right: $spacing-md;
+      margin-right: 12px;
       height: 13px;
     }
 
     .quick-filters {
       display: flex;
 
+      div:not(:last-child) {
+        margin-right: 12px;
+      }
 
       .filter {
-        margin-right: $spacing-md;
         display: flex;
-        font-size: 11px;
         align-items: center;
         justify-content: center;
         padding: 0 $spacing-sm;
@@ -35,112 +36,126 @@
         }
 
         .chevron-down {
-          width: 9px;
+          width: 10px;
           margin-right: $spacing-sm;
         }
 
         .times-circle {
-          width: 10px;
+          width: 12px;
         }
       }
     }
 
     .reset {
       padding: $spacing-sm;
-
-      a {
-        font-size: 11px;
-      }
+      margin-right: 4px;
     }
   }
 
-  .header {
-    display: flex;
-    background: $gray-100;
-    border-bottom: 2px solid $gray-200;
-    padding: 12px $spacing-sm;
 
-    p {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 13px;
-      margin-right: $spacing-sm;
-    }
-  }
 
-  .item {
-    padding: 12px;
-    background: white;
-    border-bottom: 1px solid $gray-200;
-    display: flex;
+  table {
+    width: 100%;
 
-    div {
-      display: flex;
-      margin-right: $spacing-sm;
-      align-items: center;
-      justify-content: center;
+    thead {
+      tr {
+      background: $gray-100;
+      border-bottom: 2px solid $gray-200;
 
-      &.checkbox {
-        justify-content: space-between;
-        align-items: center;
+      th div {
+        display: flex;
 
-        img {
-          height: 32px;
+        &.checkbox {
+          width: 123px;
+          padding-left: $spacing-sm;
         }
-      }
 
-      &.title {
-        p {
-          margin-left: $spacing-sm;
-          font-size: 13px;
-          font-weight: 700;
-          color: $brand-primary;
-          white-space: nowrap;
-        }
-      }
-
-      &.description {
-        width: 300px;
-      }
-
-      &.uploaded-changed {
-        flex-direction: column;
-
-        div {
-          white-space: nowrap;
-
-          img {
+        &.uploaded-changed {
+          img:first-child {
             margin-right: $spacing-sm;
           }
         }
       }
 
-      .badge {
-        border-radius: 9999px;
-        padding: 6px;
 
-        &.primary {
-          background: $brand-primary;
-          text-transform: uppercase;
-          color: white;
-          font-weight: 700;
 
-          img {
-            margin-right: 6px;
-          }
-        }
-
-        &.secondary {
-          box-shadow: 0 0 0 1px $brand-primary;
-          color: $brand-primary;
-        }
+      p {
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 12px 0;
+        margin-right: $spacing-sm;
       }
     }
+    }
 
-    &:hover {
-      box-shadow: 0 3px 24px 0 rgba($gray-200, 0.6);
-      position: relative;
-      z-index: 1;
+    tbody {
+      tr:hover {
+        box-shadow: 0 3px 24px 0 rgba($gray-200, 0.6);
+        position: relative;
+        z-index: 1;
+      }
+
+      td {
+        vertical-align: middle;
+        border-bottom: 1px solid $gray-200;
+
+        & > div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: $spacing-sm 0;
+
+          &.checkbox {
+            justify-content: space-between;
+            align-items: center;
+            width: 94px;
+            padding-left: $spacing-sm;
+
+            img {
+              margin-left: $spacing-sm;
+              height: 32px;
+            }
+          }
+
+          &.title {
+            min-width: 158px;
+
+            p {
+              margin-left: $spacing-sm;
+              font-weight: 700;
+              color: $brand-primary;
+              white-space: nowrap;
+            }
+          }
+
+          &.uploaded-changed {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+
+            & > div {
+              white-space: nowrap;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              img {
+                margin-right: $spacing-sm;
+              }
+
+              &:not(:last-child) {
+                margin-bottom: $spacing-sm;
+              }
+            }
+          }
+
+          &.tags, &.secondary-tags {
+            & > div {
+              margin-right: $spacing-sm;
+            }
+          }
+        }
+      }
     }
   }
 
