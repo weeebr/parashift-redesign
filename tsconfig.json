@@ -4,27 +4,42 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": false,
+    "strict": false,
+    "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "resolveJsonModule": true,
     "target": "es2017",
     "module": "es2020",
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "constants/*": ["src/app/constants/*"],
+      "environments/*": ["src/environments/*"],
+      "layout/*": ["src/app/layout/*"],
+      "models/*": ["src/app/models/*"],
+      "registers/*": ["src/app/registers/*"],
+      "resolvers/*": ["src/app/resolvers/*"],
+      "services/*": ["src/app/services/*"],
+      "shared/*": ["src/app/shared/*"],
+      "shared-pdc/*": ["src/app/shared-pdc/*"],
+      "testing": ["src/testing/*"],
+    }
   },
   "angularCompilerOptions": {
+    "preserveWhitespaces": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": false
   }
 }
