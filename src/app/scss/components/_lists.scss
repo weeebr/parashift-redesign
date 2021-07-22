@@ -99,36 +99,37 @@
         vertical-align: middle;
         border-bottom: 1px solid $gray-200;
 
-        & > div {
-          display: flex;
+        &.title {
+          width: 271px;
+
+          p {
+            margin-left: $spacing-sm;
+            font-weight: 700;
+            color: $brand-primary;
+            white-space: nowrap;
+          }
+        }
+
+        &.description {
+          width: 300px;
+          padding-right: 40px;
+          line-height: 1.5;
+        }
+
+        &.checkbox {
+          justify-content: space-between;
           align-items: center;
-          justify-content: flex-start;
-          padding: $spacing-sm 0;
+          width: 94px;
+          padding-left: $spacing-sm;
 
-          &.checkbox {
-            justify-content: space-between;
-            align-items: center;
-            width: 94px;
-            padding-left: $spacing-sm;
-
-            img {
-              margin-left: $spacing-sm;
-              height: 32px;
-            }
+          img {
+            margin-left: $spacing-sm;
+            height: 32px;
           }
+        }
 
-          &.title {
-            min-width: 158px;
-
-            p {
-              margin-left: $spacing-sm;
-              font-weight: 700;
-              color: $brand-primary;
-              white-space: nowrap;
-            }
-          }
-
-          &.uploaded-changed {
+        &.uploaded-changed {
+          & > div {
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-end;
@@ -148,6 +149,13 @@
               }
             }
           }
+        }
+
+        & > div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: $spacing-sm 0;
 
           &.tags, &.secondary-tags {
             & > div {
