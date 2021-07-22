@@ -49,7 +49,12 @@ table {
 /*
   Custom CSS
 */
-body {
+body, button {
   font-family: Barlow, Arial, sans-serif;
-  overflow: auto;
+  color: #3E515B;
+}
+
+a {
+  color: #4DB6CE;
+  text-decoration: none;
 }
