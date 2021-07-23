@@ -38,7 +38,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let d of data">
+      <tr *ngFor="let d of data; let i = index">
         <td class="checkbox">
           <div>
             <input type="checkbox">
@@ -47,7 +47,10 @@
         </td>
         <td class="title">
           <div>
-            <img src="assets/individual.svg" />
+            <div class="visibility">
+              <img *ngIf="i % 3 !== 0" src="assets/chart-network.svg" width="16px" />
+              <img *ngIf="i % 3 === 0" src="assets/individual.svg" width="12px" />
+            </div>
             <p>Lorem Pisum</p>
           </div>
         </td>

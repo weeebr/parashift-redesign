@@ -168,6 +168,10 @@
         &.title {
           width: 250px;
 
+          .visibility {
+            width: 18px;
+          }
+
           p {
             margin-left: $spacing-sm;
             font-weight: 700;
@@ -231,7 +235,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: $spacing-sm;
+    padding: $spacing-sm 0;
+    margin-top: $spacing-sm;
 
     .pagination-buttons {
       display: flex;

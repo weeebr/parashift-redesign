@@ -1,0 +1,11 @@
+<div class="tabs">
+  <div class="tab" *ngFor="let d of data; let i = index"
+    [ngClass]="{
+      active: i === isActive
+    }"
+    (click)="isActive = i"
+  >
+    <p>{{ d }}</p>
+    <img src="assets/caret-down.svg">
+  </div>
+</div>
