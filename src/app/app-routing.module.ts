@@ -9,6 +9,7 @@ import { ReportsPageComponent } from './pages/reports-page/reports-page.componen
 
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/documents', pathMatch: 'full' },
   { path: 'documents', component: DocumentsPageComponent },
   { path: 'configuration', component: ConfigurationPageComponent },
   { path: 'development', component: DevelopmentPageComponent },

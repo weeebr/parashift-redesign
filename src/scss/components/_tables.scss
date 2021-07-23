@@ -143,6 +143,7 @@
           button {
             padding: 4px $spacing-sm;
             border-radius: $border-radius;
+            height: auto;
 
             &:not(:last-child) {
               margin-right: $spacing-sm;
@@ -167,6 +168,16 @@
 
           .actions {
             position: absolute;
+            display: flex;
+
+            button {
+              display: block;
+
+              &.btn-secondary {
+                padding: 4px 0 4px 8px;
+              }
+            }
+
             right: 15px;
             top: 15px;
             visibility: visible;
