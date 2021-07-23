@@ -1,10 +1,12 @@
 @import 'reset';
 @import 'functions';
 @import 'variables';
+@import 'typography';
 @import 'page-layout/navigation';
 @import 'page-layout/header';
 @import 'page-layout/content';
 @import 'page-layout/tabs';
+@import 'components/buttons';
 @import 'components/tables';
 @import 'components/badges';
 
@@ -26,4 +28,9 @@ a {
 
 input {
   outline: 0;
+}
+
+.card section {
+  border: 1px solid $gray-100;
+  padding: $spacing-md;
 }

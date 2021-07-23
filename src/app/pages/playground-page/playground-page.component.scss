@@ -1,0 +1,22 @@
+@import 'src/scss/variables';
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    width: 50%;
+
+    & > div {
+      display: flex;
+
+      & > *:not(:last-child) {
+        margin-right: $spacing-sm;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.btn-primary, .btn-secondary {
+  border-radius: $border-radius;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+
+  img {
+    margin-right: $spacing-sm;
+  }
+}
+
+.btn-primary {
+  background: $brand-primary-dark;
+  color: white;
+}
+
+
+
+.btn-secondary {
+  background: transparent;
+  color: $brand-primary-dark;
+  box-shadow: 0 0 0 1px $brand-primary-dark;
+}
