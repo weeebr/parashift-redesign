@@ -33,6 +33,10 @@ nav {
         width: 149px;
         margin-bottom: 18px;
 
+        &.playground img {
+          width: 16px;
+        }
+
         &:hover, &.active {
           background: #11657B;
           cursor: pointer;
