@@ -107,9 +107,25 @@
 
     tbody {
       @include scrollbar-x;
-      max-height: calc(57px * 15); // 15 items
+      /* TODO: would be cool to add a calculation that does sth. like this:
+
+      $line-item-height: 57px;
+      $data-height: $line-item-height * 15; // 15 items
+      $diff: 60vh - get-vw($data-height);
+      $max-height: min($data-height, 60vh - $data-height);
+
+      max-height: $max-height; */
+      max-height: 60vh;
+
       display: block;
       overflow-y: scroll;
+
+      background: linear-gradient(0deg,
+        rgba(152, 173, 184, 0.1) -5%,
+        transparent 2%,
+        transparent 98%,
+        rgba(152, 173, 184, 0.1) 105%
+      );
 
       tr {
         position: relative;
