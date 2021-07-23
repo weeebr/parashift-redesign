@@ -55,52 +55,102 @@
 
 
   table {
-    width: 100%;
+    thead tr, tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+
+    }
 
     thead {
       tr {
-      background: $gray-100;
-      border-bottom: 2px solid $gray-200;
+        background: $gray-100;
+        border-bottom: 2px solid $gray-200;
 
-      th div {
-        display: flex;
+        th {
+          &.checkbox {
+            width: 120px;
+            max-width: 120px;
+            padding-left: $spacing-sm;
+          }
 
-        &.checkbox {
-          width: 123px;
-          padding-left: $spacing-sm;
-        }
+          &.title {
+            width: 250px;
+            max-width: 250px;
+          }
 
-        &.uploaded-changed {
-          img:first-child {
-            margin-right: $spacing-sm;
+          &.description {
+            width: 320px;
+            max-width: 320px;
+          }
+
+          div {
+            display: flex;
+            margin-right: $spacing-md;
+
+            &.uploaded-changed {
+              img:first-child {
+                margin-right: $spacing-sm;
+              }
+            }
           }
         }
+
+        p {
+          text-transform: uppercase;
+          font-weight: 700;
+          padding: 12px 0;
+          margin-right: $spacing-sm;
+        }
       }
-
-
-
-      p {
-        text-transform: uppercase;
-        font-weight: 700;
-        padding: 12px 0;
-        margin-right: $spacing-sm;
-      }
-    }
     }
 
     tbody {
-      tr:hover {
-        box-shadow: 0 3px 24px 0 rgba($gray-200, 0.6);
+      @include scrollbar-x;
+      max-height: calc(57px * 15); // 15 items
+      display: block;
+      overflow-y: scroll;
+
+      tr {
         position: relative;
-        z-index: 1;
+
+        &:hover {
+          box-shadow: 0 3px 24px 0 rgba($gray-200, 0.6);
+          position: relative;
+          z-index: 1;
+        }
       }
 
       td {
         vertical-align: middle;
         border-bottom: 1px solid $gray-200;
 
+        &.fixed {
+          position: absolute;
+          width: 5em;
+          left: 0;
+          top: auto;
+          border-top-width: 1px;
+          /*only relevant for first row*/
+          margin-top: -1px;
+          /*compensate for top border*/
+        }
+
+        &.checkbox {
+          justify-content: space-between;
+          align-items: center;
+          width: 120px;
+          max-width: 120px;
+          padding-left: $spacing-sm;
+
+          img {
+            margin-left: $spacing-sm;
+            height: 32px;
+          }
+        }
+
         &.title {
-          width: 271px;
+          width: 250px;
 
           p {
             margin-left: $spacing-sm;
@@ -111,25 +161,13 @@
         }
 
         &.description {
-          width: 300px;
-          padding-right: 40px;
+          width: 320px;
+          max-width: 320px;
           line-height: 1.5;
 
           p {
             height: 38px;
             overflow: hidden;
-          }
-        }
-
-        &.checkbox {
-          justify-content: space-between;
-          align-items: center;
-          width: 94px;
-          padding-left: $spacing-sm;
-
-          img {
-            margin-left: $spacing-sm;
-            height: 32px;
           }
         }
 
@@ -161,6 +199,7 @@
           align-items: center;
           justify-content: flex-start;
           padding: $spacing-sm 0;
+          margin-right: $spacing-md;
 
           &.tags, &.secondary-tags {
             & > div {

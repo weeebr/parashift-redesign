@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'functions';
+@import 'variables';
+@import 'page-layout/navigation';
+@import 'page-layout/header';
+@import 'page-layout/content';
+@import 'page-layout/tabs';
+@import 'components/tables';
+@import 'components/badges';
+
+.app {
+  display: flex;
+}
+
+body, button {
+  font-family: Barlow, Arial, sans-serif;
+  font-size: 13px;
+  color: #3E515B;
+  border: none;
+}
+
+a {
+  color: #4DB6CE;
+  text-decoration: none;
+}
+
+input {
+  outline: 0;
+}

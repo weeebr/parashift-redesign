@@ -1,0 +1,107 @@
+<div class="list has-checkboxes">
+  <div class="changes">
+    <input class="search" type="text" placeholder="Search...">
+    <div class="quick-filters">
+      <div class="filter">
+        <p class="name">Stage</p>
+        <p class="value">Separation</p>
+        <img class="chevron-down" src="assets/qf-chevron-down.svg">
+        <img  class="times-circle" src="assets/qf-times-circle.svg">
+      </div>
+      <div class="filter">
+        <p class="name">Status</p>
+        <p class="value">In Progress</p>
+        <img class="chevron-down" src="assets/qf-chevron-down.svg">
+        <img  class="times-circle" src="assets/qf-times-circle.svg">
+      </div>
+    </div>
+    <div class="reset">
+      <a href="#">Reset</a>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="checkbox"><div><input type="checkbox"></div></th>
+        <th class="title"><div><p>Title</p></div></th>
+        <th class="description"><div><p>Description</p></div></th>
+        <th>
+          <div class="uploaded-changed">
+            <img src="assets/th-upload.svg" />
+            <img src="assets/th-sync-alt.svg" />
+          </div>
+        </th>
+            <th><div class="icons"><p>Icons</p></div></th>
+        <th><div class="tags"><p>Tags</p></div></th>
+        <th><div class="secondary-tags"><p>Secondary Tags</p></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of data">
+        <td class="checkbox">
+          <div>
+            <input type="checkbox">
+            <img src="assets/doc-preview-sm.png" />
+          </div>
+        </td>
+        <td class="title">
+          <div>
+            <img src="assets/individual.svg" />
+            <p>Lorem Pisum</p>
+          </div>
+        </td>
+        <td class="description">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          </div>
+        </td>
+        <td class="uploaded-changed">
+          <div>
+            <div><img src="assets/upload.svg" /><p>02.07.21, 11:11</p></div>
+            <div><img src="assets/sync-alt.svg" /><p>01.01.21, 14:21</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="icons">
+            <div><img src="assets/university.svg" /></div>
+          </div>
+        </td>
+        <td>
+          <div class="tags">
+            <div class="badge primary">
+              <img src="assets/flag.svg" />
+              <p>DE</p>
+            </div>
+            <div class="badge primary">
+              <img src="assets/flag.svg" />
+              <p>EN</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="secondary-tags">
+            <div class="badge secondary"><p>Custom</p></div>
+            <div class="badge secondary"><p>SpecialTag</p></div>
+          </div>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <div class="pagination-buttons">
+      <button class="btn-pagination"><img src="assets/pagination-first.svg"></button>
+      <button class="btn-pagination"><img src="assets/chevron-left.svg"></button>
+      <button class="btn-pagination active"><p>1</p></button>
+      <button class="btn-pagination"><p>2</p></button>
+      <button class="btn-pagination"><p>3</p></button>
+      <button class="btn-pagination"><img src="assets/chevron-right.svg"></button>
+      <button class="btn-pagination"><img src="assets/pagination-last.svg"></button>
+    </div>
+    <div class="count">
+      <p>1-9 of 409 <span>Document Types</span></p>
+    </div>
+  </div>
+</div>
