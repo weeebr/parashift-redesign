@@ -129,17 +129,47 @@
 
       tr {
         position: relative;
+        border-bottom: 1px solid $gray-200;
+
+        .actions {
+          visibility: hidden;
+
+          button {
+            padding: 4px $spacing-sm;
+            border-radius: $border-radius;
+
+            &:not(:last-child) {
+              margin-right: $spacing-sm;
+            }
+
+            &.btn-primary {
+              background: $brand-primary-dark;
+              color: white;
+            }
+
+            &.btn-secondary {
+              box-shadow: 0 0 0 1px $gray-200;
+              background: $gray-100;
+            }
+          }
+        }
 
         &:hover {
           box-shadow: 0 3px 24px 0 rgba($gray-200, 0.6);
           position: relative;
           z-index: 1;
+
+          .actions {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            visibility: visible;
+          }
         }
       }
 
       td {
         vertical-align: middle;
-        border-bottom: 1px solid $gray-200;
 
         &.fixed {
           position: absolute;
@@ -235,7 +265,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: $spacing-sm 0;
+    padding-top: $spacing-sm;
     margin-top: $spacing-sm;
 
     .pagination-buttons {
