@@ -1,20 +1,10 @@
 <div class="list has-checkboxes">
   <div class="changes">
-    <input class="search" type="text" placeholder="Search...">
-    <div class="quick-filters">
-      <div class="filter">
-        <p class="name">Stage</p>
-        <p class="value">Separation</p>
-        <img class="chevron-down" src="assets/qf-chevron-down.svg">
-        <img  class="times-circle" src="assets/qf-times-circle.svg">
-      </div>
-      <div class="filter">
-        <p class="name">Status</p>
-        <p class="value">In Progress</p>
-        <img class="chevron-down" src="assets/qf-chevron-down.svg">
-        <img  class="times-circle" src="assets/qf-times-circle.svg">
-      </div>
+    <div class="search">
+      <input type="text" placeholder="Search...">
+      <img src="assets/search.svg">
     </div>
+    <list-quick-filters></list-quick-filters>
     <div class="reset">
       <a href="#">Reset</a>
     </div>
@@ -35,6 +25,7 @@
             <th><div class="icons"><p>Icons</p></div></th>
         <th><div class="tags"><p>Tags</p></div></th>
         <th><div class="secondary-tags"><p>Secondary Tags</p></div></th>
+        <th>&nbsp;</th>
       </tr>
     </thead>
     <tbody>

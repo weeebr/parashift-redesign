@@ -1,0 +1,27 @@
+<div class="quick-filters">
+  <div class="filter"
+    [ngClass]="{
+      active: d.popupVisible === true
+    }"
+    *ngFor="let d of data; let i = index"
+    (click)="showPopup(d)"
+  >
+    <p class="name">{{ d.name }}</p>
+    <p class="value">{{ d.value }}</p>
+    <img class="chevron-down" src="assets/qf-chevron-down.svg">
+    <img class="times-circle" src="assets/qf-times-circle.svg">
+    <div class="popup">
+    <div>
+      <div class="search">
+        <input type="text" placeholder="Search...">
+        <img src="assets/search.svg">
+      </div>
+      <ul>
+        <li>Separation</li>
+        <li>Classification</li>
+        <li>Extraction</li>
+        <li>QC</li>
+      </ul>
+    </div>
+  </div>
+</div>
