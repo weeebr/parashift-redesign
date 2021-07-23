@@ -19,6 +19,7 @@ body, button {
   font-size: 13px;
   color: $gray-700;
   border: none;
+  transition: all 0.3s ease;
 }
 
 a {
@@ -28,6 +29,10 @@ a {
 
 input {
   outline: 0;
+}
+
+.content {
+  overflow: hidden;
 }
 
 .card section {

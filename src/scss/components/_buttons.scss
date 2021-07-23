@@ -4,22 +4,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   padding: 0 12px;
 
-  img {
-    margin-right: $spacing-sm;
+  & > *:not(:first-child) {
+    margin-left: $spacing-sm;
   }
 }
 
 .btn-primary {
   background: $brand-primary-dark;
   color: white;
+
+  &:hover {
+    box-shadow: 0 0 0 3px rgba($brand-primary, .8);
+  }
 }
-
-
 
 .btn-secondary {
   background: transparent;
   color: $brand-primary-dark;
   box-shadow: 0 0 0 1px $brand-primary-dark;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $brand-primary-dark, 0 0 0 4px rgba($brand-primary, .8);
+  }
 }

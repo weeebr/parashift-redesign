@@ -4,15 +4,45 @@
       <a href="#">Example › Sub Page</a>
     </p>
     <h1>{{ title }}</h1>
-</div>
-<div *ngIf="title === 'Documents'" class="primary-actions">
-  <button class="btn-primary">
-      <img src="assets/plus.svg">
-      <p>Create New</p>
-    </button>
-    <button class="btn-primary">
-      <img src="assets/plus.svg">
-      <p>Add existing</p>
-    </button>
-</div>
+    <p>Small description</p>
+  </div>
+  <div class="right">
+
+    <ng-container *ngIf="title === 'Configuration'">
+      <button class="btn-secondary">
+        <img src="assets/file-primary-dark.svg">
+        <p>DT Invoice</p>
+        <img src="assets/caret-down-primary-dark.svg">
+      </button>
+      <div class="primary-actions">
+        <button class="btn-secondary">
+          <img src="assets/arrow-left-primary-dark.svg">
+          <p>Back</p>
+        </button>
+        <button class="btn-secondary">
+          <img src="assets/file-primary-dark.svg">
+          <p>Single Mode</p>
+        </button>
+        <button class="btn-secondary">
+          <img src="assets/ellipsis-v-primary-dark.svg">
+        </button>
+        <button class="btn-primary">
+          <img src="assets/plus.svg">
+          <p>Done</p>
+        </button>
+
+      </div>
+    </ng-container>
+
+    <div *ngIf="title === 'Documents'" class="primary-actions">
+      <button class="btn-primary">
+        <img src="assets/plus.svg">
+        <p>Create New</p>
+      </button>
+      <button class="btn-primary">
+        <img src="assets/plus.svg">
+        <p>Add existing</p>
+      </button>
+    </div>
+  </div>
 </header>

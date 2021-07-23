@@ -21,11 +21,20 @@ header {
     }
   }
 
-  .primary-actions {
-    display: flex;
+  .right {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
 
-    & > * {
-      margin-left: $spacing-sm;
+    .primary-actions {
+      display: flex;
+      justify-content: flex-end;
+
+      & > * {
+        margin-left: $spacing-sm;
+      }
     }
   }
+
+
 }
