@@ -5,6 +5,7 @@ import { ConfigurationPageComponent } from './pages/configuration-page/configura
 import { DevelopmentPageComponent } from './pages/development-page/development-page.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { PlaygroundPageComponent } from './pages/playground-page/playground-page.component';
+import { ReportsPageComponent } from './pages/reports-page/reports-page.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'configuration', component: ConfigurationPageComponent },
   { path: 'development', component: DevelopmentPageComponent },
   { path: 'settings', component: SettingsPageComponent },
+  { path: 'reports', component: ReportsPageComponent },
   { path: 'playground', component: PlaygroundPageComponent },
 ];
 

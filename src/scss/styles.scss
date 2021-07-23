@@ -15,12 +15,12 @@
 body, button {
   font-family: Barlow, Arial, sans-serif;
   font-size: 13px;
-  color: #3E515B;
+  color: $gray-700;
   border: none;
 }
 
 a {
-  color: #4DB6CE;
+  color: $brand-primary;
   text-decoration: none;
 }
 
